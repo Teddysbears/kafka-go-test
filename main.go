@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/Teddysbears/kafka-go-test/src/consumer"
-	"github.com/Teddysbears/kafka-go-test/src/producer"
+	"github.com/Teddysbears/kafka-go-test/consumer"
+	"github.com/Teddysbears/kafka-go-test/producer"
 	"os"
 )
 
