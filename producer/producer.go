@@ -14,7 +14,7 @@ var (
 	enqueued     int
 )
 
-func main() {
+func StartProducer() {
 
 	producer, err := setupProducer()
 	if err != nil {
@@ -35,6 +35,7 @@ func main() {
 // setupProducer will create a AsyncProducer and returns it
 func setupProducer() (sarama.AsyncProducer, error) {
 	config := sarama.NewConfig()
+	sarama.Logger = log.New(os.Stderr, "[sarama_logger]", log.LstdFlags)
 	return sarama.NewAsyncProducer(kafkaBrokers, config)
 }
 
